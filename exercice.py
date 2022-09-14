@@ -3,23 +3,37 @@
 
 
 def is_even_len(string: str) -> bool:
-    pass
+    if (len(string)%2) == 0:
+        isEven = True
+    else:
+        isEven = False
+    return isEven
+
 
 
 def remove_third_char(string: str) -> str:
-    pass
+    charList = list(string)
+    charList.pop(2)
+    string = ''
+    string = string.join(charList)
+    return string
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-    pass
+    string = string.replace(old_char, new_char)
+    return string
 
 
-def get_number_of_char(string: str, char: str) -> int:
-    pass
+def get_number_of_char(string: str, char: str) -> int: #La chaîne complète est "Hello World", on doit faire quoi??
+    nbrIterance = 0
+    for c in string:
+        if c == char:
+            nbrIterance+=1
+    return nbrIterance
 
 
 def get_number_of_words(sentence: str, word: str) -> int:
-    pass
+    return sentence.count(word)
 
 
 def main() -> None:
